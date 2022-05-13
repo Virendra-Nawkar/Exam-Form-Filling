@@ -51,7 +51,7 @@ Public Class Form1
     End Sub
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
+        Me.WindowState = FormWindowState.Maximized
     End Sub
 
     Private Sub Save_Click(sender As Object, e As EventArgs) Handles Save.Click
@@ -68,18 +68,42 @@ Public Class Form1
     End Sub
 
     Private Sub TextBox2_TextChanged(sender As Object, e As EventArgs) Handles TextBox2.TextChanged
-        Dim Cardno As New Regex("\d{1}")
+
+    End Sub
+
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        Dim emptytext1 As String = ""
+        If (TextBox2.Text = emptytext1) Then
+            ErrorProvider1.SetError(TextBox2, "Complusury")
+            Button7.Visible = False
+
+        ElseIf (TextBox5.text > 100) Then
+            MsgBox("CVV can't be greater than three Digits")
+        ElseIf (TextBox5.text < val(999)) Then
+            MsgBox("CVV can't be less than three Digits")
+
+        ElseIf (TextBox5.Text = emptytext1) Then
+            ErrorProvider1.SetError(TextBox5, "Complusury")
+            Button7.Visible = False
+
+        ElseIf (TextBox6.Text = emptytext1) Then
+            ErrorProvider1.SetError(TextBox6, "Complusury")
+            Button7.Visible = False
+
+
+        Else
+            MsgBox("Your paymet is Successfull")
+            Button7.Visible = True
+
+        End If
+        Dim Cardno As New Regex("\d{3}")
         If Cardno.IsMatch(TextBox2.Text) Then
         Else
             ErrorProvider1.SetError(TextBox2, "Enter Valid Card NO.")
             MsgBox("Enter Valid Card NO.")
 
         End If
-    End Sub
 
-    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
-        MsgBox("Your paymet is Successfull")
-        TabControl1.SelectedTab = Print
         'If Not IsNumeric(Me.TextBox2.Text) Then
         ' Me.ErrorProvider1.SetError(Me.TextBox2, "Enter Valid Card Details")
     End Sub
@@ -100,10 +124,112 @@ Public Class Form1
         TextBox3.AppendText(vbTab & Label6.Text + " :   " + it + vbNewLine + vbNewLine)
         TextBox3.AppendText(vbTab & Label8.Text + " :   " + it2 + vbNewLine + vbNewLine)
         TextBox3.AppendText(vbTab & Label9.Text + " :   " + it3 + vbNewLine + vbNewLine)
+        TextBox3.AppendText(vbTab + "Selected Subjects:  " + vbNewLine)
 
         ' MsgBox("itme selected in first label is " & it)
         'TextBox3.AppendText(vbTab & "subject" + " :   " + CheckBox1.Checked + vbNewLine + vbNewLine)
         'MsgBox(CheckBox1.Checked)
+        If (CheckBox1.Checked = True) Then
+            Dim valuecheckSubject As String
+            valuecheckSubject = "VB.Net"
+            TextBox3.AppendText(vbTab & vbTab & CheckBox1.Text & vbTab + " :True " + vbNewLine + vbNewLine)
+        End If
+
+        If (CheckBox2.Checked = True) Then
+            Dim valuecheckSubject As String
+            valuecheckSubject = "VB.Net"
+            TextBox3.AppendText(vbTab & vbTab & CheckBox2.Text & vbTab + " :True " + vbNewLine + vbNewLine)
+        End If
+
+        If (CheckBox3.Checked = True) Then
+            Dim valuecheckSubject As String
+            valuecheckSubject = "VB.Net"
+            TextBox3.AppendText(vbTab & vbTab & CheckBox3.Text & vbTab + " :True " + vbNewLine + vbNewLine)
+        End If
+
+        If (CheckBox4.Checked = True) Then
+            Dim valuecheckSubject As String
+            valuecheckSubject = "VB.Net"
+            TextBox3.AppendText(vbTab & vbTab & CheckBox4.Text & vbTab + " :True " + vbNewLine + vbNewLine)
+        End If
+
+        If (CheckBox5.Checked = True) Then
+            Dim valuecheckSubject As String
+            valuecheckSubject = "VB.Net"
+            TextBox3.AppendText(vbTab & vbTab & CheckBox5.Text & vbTab + " :True " + vbNewLine + vbNewLine)
+        End If
+
+        If (CheckBox6.Checked = True) Then
+            Dim valuecheckSubject As String
+            valuecheckSubject = "VB.Net"
+            TextBox3.AppendText(vbTab & vbTab & CheckBox6.Text & vbTab + " :True " + vbNewLine + vbNewLine)
+        End If
+
+        If (CheckBox7.Checked = True) Then
+            Dim valuecheckSubject As String
+            valuecheckSubject = "VB.Net"
+            TextBox3.AppendText(vbTab & vbTab & CheckBox7.Text & vbTab + " :True " + vbNewLine + vbNewLine)
+        End If
+
+        If (CheckBox8.Checked = True) Then
+            Dim valuecheckSubject As String
+            valuecheckSubject = "VB.Net"
+            TextBox3.AppendText(vbTab & vbTab & CheckBox8.Text & vbTab + " :True " + vbNewLine + vbNewLine)
+        End If
+
+        If (CheckBox9.Checked = True) Then
+            Dim valuecheckSubject As String
+            valuecheckSubject = "VB.Net"
+            TextBox3.AppendText(vbTab & vbTab & CheckBox9.Text & vbTab + " :True " + vbNewLine + vbNewLine)
+        End If
+
+        If (CheckBox10.Checked = True) Then
+            Dim valuecheckSubject As String
+            valuecheckSubject = "VB.Net"
+            TextBox3.AppendText(vbTab & vbTab & CheckBox10.Text & vbTab + " :True " + vbNewLine + vbNewLine)
+        End If
+
+        If (CheckBox11.Checked = True) Then
+            Dim valuecheckSubject As String
+            valuecheckSubject = "VB.Net"
+            TextBox3.AppendText(vbTab & vbTab & CheckBox11.Text & vbTab + " :True " + vbNewLine + vbNewLine)
+        End If
+
+        If (CheckBox12.Checked = True) Then
+            Dim valuecheckSubject As String
+            valuecheckSubject = "VB.Net"
+            TextBox3.AppendText(vbTab & vbTab & CheckBox12.Text & vbTab + " :True " + vbNewLine + vbNewLine)
+        End If
+
+        If (CheckBox13.Checked = True) Then
+            Dim valuecheckSubject As String
+            valuecheckSubject = "VB.Net"
+            TextBox3.AppendText(vbTab & vbTab & CheckBox13.Text & vbTab + " :True " + vbNewLine + vbNewLine)
+        End If
+
+        If (CheckBox14.Checked = True) Then
+            Dim valuecheckSubject As String
+            valuecheckSubject = "VB.Net"
+            TextBox3.AppendText(vbTab & vbTab & CheckBox14.Text & vbTab + " :True " + vbNewLine + vbNewLine)
+        End If
+
+        If (CheckBox15.Checked = True) Then
+            Dim valuecheckSubject As String
+            valuecheckSubject = "VB.Net"
+            TextBox3.AppendText(vbTab & vbTab & CheckBox15.Text & vbTab + " :True " + vbNewLine + vbNewLine)
+        End If
+
+        If (CheckBox16.Checked = True) Then
+            Dim valuecheckSubject As String
+            valuecheckSubject = "VB.Net"
+            TextBox3.AppendText(vbTab & vbTab & CheckBox16.Text & vbTab + " :True " + vbNewLine + vbNewLine)
+        End If
+
+        If (CheckBox17.Checked = True) Then
+            Dim valuecheckSubject As String
+            valuecheckSubject = "VB.Net"
+            TextBox3.AppendText(vbTab & vbTab & CheckBox17.Text & vbTab + " :True " + vbNewLine + vbNewLine)
+        End If
     End Sub
 
     Private Sub Label20_Click(sender As Object, e As EventArgs) Handles Label20.Click
@@ -126,13 +252,13 @@ Public Class Form1
         Dim Name As New Regex("\d{1}")
         If Name.IsMatch(TextBox1.Text) Then
             ErrorProvider1.SetError(TextBox1, "Enter Name")
-            MsgBox("Enter Valid Name")
+            MsgBox("Name should contain only Char")
         Else
 
         End If
     End Sub
 
-    Private Sub ProgressBar1_Click(sender As Object, e As EventArgs) Handles ProgressBar1.Click
+    Private Sub ProgressBar1_Click(sender As Object, e As EventArgs)
 
     End Sub
 
@@ -161,13 +287,15 @@ Public Class Form1
         If roll.IsMatch(TextBox7.Text) Then
         Else
             ErrorProvider1.SetError(TextBox7, "Enter Valid Roll No.")
-            MsgBox("Enter Valid Roll No.")
+            MsgBox("Roll No. should contain only Numeric")
 
         End If
     End Sub
 
     Private Sub DateTimePicker1_ValueChanged(sender As Object, e As EventArgs) Handles DateTimePicker1.ValueChanged
-        '
+        ' If (DateTimePicker < 0) Then
+        ' MsgBox(DateTimePicker1)
+        'End If
     End Sub
 
     Private Sub ListBox1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ListBox1.SelectedIndexChanged
@@ -188,7 +316,7 @@ Public Class Form1
         If Enroll.IsMatch(TextBox8.Text) Then
         Else
             ErrorProvider1.SetError(TextBox8, "Enter Valid Enrollment NO.")
-            MsgBox("Enter Valid Enrollment NO.")
+            MsgBox("Enrollment NO. should contain only Numeric")
 
         End If
     End Sub
@@ -197,7 +325,7 @@ Public Class Form1
         Dim City As New Regex("\d{1}")
         If City.IsMatch(TextBox4.Text) Then
             ErrorProvider1.SetError(TextBox4, "Enter Valid City Name")
-            MsgBox("Enter Valid City Name")
+            MsgBox("City Name should contain only Char")
         Else
 
         End If
@@ -214,16 +342,92 @@ Public Class Form1
     End Sub
 
     Private Sub TextBox5_TextChanged(sender As Object, e As EventArgs) Handles TextBox5.TextChanged
-        Dim CVV As New Regex("\d{1}")
-        If CVV.IsMatch(TextBox5.Text) Then
-        Else
-            ErrorProvider1.SetError(TextBox5, "Enter Valid CVV NO.")
-            MsgBox("Enter Valid CVV NO.")
+        Dim CVV As New Regex("\d{3}")
+        '        If CVV.IsMatch(TextBox5.Text) Then
 
-        End If
+
+        '        Else
+        '       ErrorProvider1.SetError(TextBox5, "Enter Valid CVV NO.")
+        '      MsgBox("Enter Valid CVV NO.")
+
+        '      End If
     End Sub
 
     Private Sub TextBox3_TextChanged_1(sender As Object, e As EventArgs) Handles TextBox3.TextChanged
 
+    End Sub
+
+    Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
+        Dim psi As New ProcessStartInfo
+
+        psi.UseShellExecute = True
+
+        psi.Verb = "print"
+
+        psi.WindowStyle = ProcessWindowStyle.Hidden
+
+        psi.Arguments = PrintDialog1.PrinterSettings.PrinterName.ToString() ' Here specify printer name
+
+        psi.FileName = "D:\My.txt" ' Here specify a document to be printed
+
+        Process.Start(psi)
+    End Sub
+
+    Private Sub Button6_Click(sender As Object, e As EventArgs) Handles Button6.Click
+        Dim emptytext As String = ""
+        If (TextBox1.Text = emptytext) Then
+            ErrorProvider1.SetError(TextBox1, "Complusury")
+            Button1.Visible = False
+        ElseIf (TextBox4.Text = emptytext) Then
+            ErrorProvider1.SetError(TextBox4, "Complusury")
+            Button1.Visible = False
+
+        ElseIf (TextBox7.Text = emptytext) Then
+            ErrorProvider1.SetError(TextBox7, "Complusury")
+            Button1.Visible = False
+
+        ElseIf (TextBox8.Text = emptytext) Then
+            ErrorProvider1.SetError(TextBox8, "Complusury")
+            Button1.Visible = False
+            If (RadioButton1.Checked = False And RadioButton2.Checked = False) Then
+                ErrorProvider1.SetError(RadioButton1, "Complusury")
+                Button1.Visible = False
+
+                'ElseIf (RadioButton2.Checked = False) Then
+                '   ErrorProvider1.SetError(RadioButton2, "Complusury")
+                ' Button1.Visible = False
+
+
+            Else
+                Button1.Visible = True
+
+                ' Dim inst As String = RadioButton1.Checked
+
+            End If
+        Else
+            Button1.Visible = True
+
+        End If
+        MsgBox("Enter every Details to procced with Next Button")
+
+
+    End Sub
+
+    Private Sub RadioButton2_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButton2.CheckedChanged
+
+    End Sub
+
+    Private Sub Label2_Click(sender As Object, e As EventArgs) Handles Label2.Click
+
+    End Sub
+
+    Private Sub CheckBox17_CheckedChanged(sender As Object, e As EventArgs) Handles CheckBox17.CheckedChanged
+
+    End Sub
+
+    Private Sub Button7_Click(sender As Object, e As EventArgs) Handles Button7.Click
+
+
+        TabControl1.SelectedTab = Print
     End Sub
 End Class
