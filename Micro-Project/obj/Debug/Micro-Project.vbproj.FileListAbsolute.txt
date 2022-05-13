@@ -1,0 +1,13 @@
+C:\Users\DELL\source\repos\Micro-Project\Micro-Project\bin\Debug\Micro-Project.exe.config
+C:\Users\DELL\source\repos\Micro-Project\Micro-Project\bin\Debug\Micro-Project.exe
+C:\Users\DELL\source\repos\Micro-Project\Micro-Project\bin\Debug\Micro-Project.pdb
+C:\Users\DELL\source\repos\Micro-Project\Micro-Project\bin\Debug\Micro-Project.xml
+C:\Users\DELL\source\repos\Micro-Project\Micro-Project\obj\Debug\Micro-Project.vbproj.AssemblyReference.cache
+C:\Users\DELL\source\repos\Micro-Project\Micro-Project\obj\Debug\Micro-Project.vbproj.SuggestedBindingRedirects.cache
+C:\Users\DELL\source\repos\Micro-Project\Micro-Project\obj\Debug\Micro_Project.Form1.resources
+C:\Users\DELL\source\repos\Micro-Project\Micro-Project\obj\Debug\Micro_Project.Resources.resources
+C:\Users\DELL\source\repos\Micro-Project\Micro-Project\obj\Debug\Micro-Project.vbproj.GenerateResource.cache
+C:\Users\DELL\source\repos\Micro-Project\Micro-Project\obj\Debug\Micro-Project.vbproj.CoreCompileInputs.cache
+C:\Users\DELL\source\repos\Micro-Project\Micro-Project\obj\Debug\Micro-Project.exe
+C:\Users\DELL\source\repos\Micro-Project\Micro-Project\obj\Debug\Micro-Project.xml
+C:\Users\DELL\source\repos\Micro-Project\Micro-Project\obj\Debug\Micro-Project.pdb
